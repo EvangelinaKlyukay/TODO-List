@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A658C47C25FBA2EB00AF1AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47B25FBA2EB00AF1AC0 /* AppDelegate.swift */; };
 		A658C47E25FBA2EB00AF1AC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47D25FBA2EB00AF1AC0 /* SceneDelegate.swift */; };
 		A658C48025FBA2EB00AF1AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47F25FBA2EB00AF1AC0 /* ViewController.swift */; };
-		A658C48325FBA2EB00AF1AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A658C48125FBA2EB00AF1AC0 /* Main.storyboard */; };
 		A658C48525FBA2EC00AF1AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */; };
 		A658C48825FBA2EC00AF1AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A658C48625FBA2EC00AF1AC0 /* LaunchScreen.storyboard */; };
+		A658C4AA25FF9AEA00AF1AC0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */; };
+		A658C4AD25FF9BE300AF1AC0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C4AC25FF9BE300AF1AC0 /* Task.swift */; };
+		A658C527260231CF00AF1AC0 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A658C526260231CF00AF1AC0 /* FSCalendar */; };
+		A658C5302602336F00AF1AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A658C52E2602336F00AF1AC0 /* Main.storyboard */; };
+		A658C53E26032FAF00AF1AC0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C53D26032FAF00AF1AC0 /* APIService.swift */; };
+		A658C54126032FDB00AF1AC0 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C54026032FDB00AF1AC0 /* DescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +25,15 @@
 		A658C47B25FBA2EB00AF1AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A658C47D25FBA2EB00AF1AC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A658C47F25FBA2EB00AF1AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A658C48225FBA2EB00AF1AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A658C48725FBA2EC00AF1AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A658C48925FBA2EC00AF1AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A658C4AC25FF9BE300AF1AC0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		A658C52F2602336F00AF1AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../../MVVM/MVVM/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A658C53A2603280D00AF1AC0 /* DataBase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DataBase.json; sourceTree = "<group>"; };
+		A658C53D26032FAF00AF1AC0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		A658C54026032FDB00AF1AC0 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A658C527260231CF00AF1AC0 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +69,50 @@
 			children = (
 				A658C47B25FBA2EB00AF1AC0 /* AppDelegate.swift */,
 				A658C47D25FBA2EB00AF1AC0 /* SceneDelegate.swift */,
-				A658C47F25FBA2EB00AF1AC0 /* ViewController.swift */,
-				A658C48125FBA2EB00AF1AC0 /* Main.storyboard */,
+				A658C49325FF376200AF1AC0 /* Model */,
+				A658C49225FF375900AF1AC0 /* View */,
+				A658C49125FF373200AF1AC0 /* Controller */,
+				A658C53C26032F8700AF1AC0 /* Network */,
 				A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */,
 				A658C48625FBA2EC00AF1AC0 /* LaunchScreen.storyboard */,
 				A658C48925FBA2EC00AF1AC0 /* Info.plist */,
 			);
 			path = "TODO List";
+			sourceTree = "<group>";
+		};
+		A658C49125FF373200AF1AC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A658C47F25FBA2EB00AF1AC0 /* ViewController.swift */,
+				A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */,
+				A658C54026032FDB00AF1AC0 /* DescriptionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A658C49225FF375900AF1AC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A658C52E2602336F00AF1AC0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A658C49325FF376200AF1AC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A658C4AC25FF9BE300AF1AC0 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A658C53C26032F8700AF1AC0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A658C53A2603280D00AF1AC0 /* DataBase.json */,
+				A658C53D26032FAF00AF1AC0 /* APIService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +131,9 @@
 			dependencies = (
 			);
 			name = "TODO List";
+			packageProductDependencies = (
+				A658C526260231CF00AF1AC0 /* FSCalendar */,
+			);
 			productName = "TODO List";
 			productReference = A658C47825FBA2EB00AF1AC0 /* TODO List.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +161,9 @@
 				Base,
 			);
 			mainGroup = A658C46F25FBA2EB00AF1AC0;
+			packageReferences = (
+				A658C525260231CF00AF1AC0 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = A658C47925FBA2EB00AF1AC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +180,7 @@
 			files = (
 				A658C48825FBA2EC00AF1AC0 /* LaunchScreen.storyboard in Resources */,
 				A658C48525FBA2EC00AF1AC0 /* Assets.xcassets in Resources */,
-				A658C48325FBA2EB00AF1AC0 /* Main.storyboard in Resources */,
+				A658C5302602336F00AF1AC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A658C4AD25FF9BE300AF1AC0 /* Task.swift in Sources */,
+				A658C54126032FDB00AF1AC0 /* DescriptionViewController.swift in Sources */,
 				A658C48025FBA2EB00AF1AC0 /* ViewController.swift in Sources */,
+				A658C4AA25FF9AEA00AF1AC0 /* TableViewCell.swift in Sources */,
 				A658C47C25FBA2EB00AF1AC0 /* AppDelegate.swift in Sources */,
+				A658C53E26032FAF00AF1AC0 /* APIService.swift in Sources */,
 				A658C47E25FBA2EB00AF1AC0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,20 +204,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A658C48125FBA2EB00AF1AC0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A658C48225FBA2EB00AF1AC0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A658C48625FBA2EC00AF1AC0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A658C48725FBA2EC00AF1AC0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A658C52E2602336F00AF1AC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A658C52F2602336F00AF1AC0 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -289,6 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4647YNHF8;
 				INFOPLIST_FILE = "TODO List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.klyukay.eva.TODO-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4647YNHF8;
 				INFOPLIST_FILE = "TODO List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.klyukay.eva.TODO-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -341,6 +401,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A658C525260231CF00AF1AC0 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A658C526260231CF00AF1AC0 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A658C525260231CF00AF1AC0 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A658C47025FBA2EB00AF1AC0 /* Project object */;
 }
