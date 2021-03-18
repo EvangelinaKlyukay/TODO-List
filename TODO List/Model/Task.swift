@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct Task {
-    let id:Int = 1
-    let date_start:Int = 147600000
-    let date_finish:Int = 147610000
-    let name:String = "My task"
-    let description:String = "Описание моего дела"
+struct TaskData: Decodable {
+    var task: [Task]
+}
+
+struct Task : Decodable {
+    let id: Int
+    let date_start: Double
+    let date_finish: Double
+    let name: String
+    let description: String
 }
