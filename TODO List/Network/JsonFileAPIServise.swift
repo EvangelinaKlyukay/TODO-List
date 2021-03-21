@@ -10,20 +10,29 @@ import Foundation
 
 class JsonFileAPIServise: APIService {
     
-    let file = "DataBase.json"
+    private let fileName = "DataBase"
+    private let fileExtension = "json"
+    
+    private var allTasks: [Task]?
 
     func loadTasks() -> [Task]! {
-        if let url = Bundle.main.url(forResource: file, withExtension: "json") {
+        if allTasks != nil {
+            return allTasks
+        }
+        
+        if let url = Bundle.main.url(forResource: fileName, withExtension: fileExtension) {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let container = try decoder.decode(TasksContainer.self, from: data)
-                return container.tasks
+                allTasks = container.tasks
             } catch {
+                allTasks = [Task]()
                 print("error:\(error)")
             }
         }
-        return [Task]()
+        
+        return allTasks
     }
     
 }
