@@ -20,6 +20,7 @@
 		A6644BB42607103000A2A722 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6644BB32607103000A2A722 /* Main.storyboard */; };
 		A6644BBC2607192F00A2A722 /* TaskReceiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BBB2607192F00A2A722 /* TaskReceiveService.swift */; };
 		A6644BBF26071C4600A2A722 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BBE26071C4600A2A722 /* APIService.swift */; };
+		A6644BCD2607B7A200A2A722 /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BCC2607B7A200A2A722 /* AppRoot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A6644BB32607103000A2A722 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A6644BBB2607192F00A2A722 /* TaskReceiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReceiveService.swift; sourceTree = "<group>"; };
 		A6644BBE26071C4600A2A722 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		A6644BCC2607B7A200A2A722 /* AppRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +78,11 @@
 				A658C49325FF376200AF1AC0 /* Model */,
 				A658C49225FF375900AF1AC0 /* View */,
 				A658C49125FF373200AF1AC0 /* Controller */,
-				A658C53C26032F8700AF1AC0 /* Network */,
 				A6644BBA260718F400A2A722 /* Services */,
 				A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */,
 				A658C48625FBA2EC00AF1AC0 /* LaunchScreen.storyboard */,
 				A658C48925FBA2EC00AF1AC0 /* Info.plist */,
+				A6644BCC2607B7A200A2A722 /* AppRoot.swift */,
 			);
 			path = "TODO List";
 			sourceTree = "<group>";
@@ -124,6 +126,7 @@
 		A6644BBA260718F400A2A722 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A658C53C26032F8700AF1AC0 /* Network */,
 				A6644BBB2607192F00A2A722 /* TaskReceiveService.swift */,
 			);
 			path = Services;
@@ -214,6 +217,7 @@
 				A658C47C25FBA2EB00AF1AC0 /* AppDelegate.swift in Sources */,
 				A658C53E26032FAF00AF1AC0 /* JsonFileAPIServise.swift in Sources */,
 				A658C47E25FBA2EB00AF1AC0 /* SceneDelegate.swift in Sources */,
+				A6644BCD2607B7A200A2A722 /* AppRoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
