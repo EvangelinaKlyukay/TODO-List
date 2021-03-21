@@ -18,9 +18,9 @@ class JsonFileAPIServise: APIService {
         self.fileName = fileName
     }
     
-    func loadTasks() -> [Task]! {
+    func loadTasks() -> [Task] {
         if allTasks != nil {
-            return allTasks
+            return allTasks!
         }
         
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
@@ -36,7 +36,7 @@ class JsonFileAPIServise: APIService {
             allTasks = [Task]()
         }
         
-        return allTasks
+        return allTasks!
     }
     
 }

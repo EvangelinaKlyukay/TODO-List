@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A658C47C25FBA2EB00AF1AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47B25FBA2EB00AF1AC0 /* AppDelegate.swift */; };
 		A658C47E25FBA2EB00AF1AC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47D25FBA2EB00AF1AC0 /* SceneDelegate.swift */; };
-		A658C48025FBA2EB00AF1AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47F25FBA2EB00AF1AC0 /* ViewController.swift */; };
+		A658C48025FBA2EB00AF1AC0 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47F25FBA2EB00AF1AC0 /* TimelineViewController.swift */; };
 		A658C48525FBA2EC00AF1AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */; };
 		A658C48825FBA2EC00AF1AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A658C48625FBA2EC00AF1AC0 /* LaunchScreen.storyboard */; };
 		A658C4AA25FF9AEA00AF1AC0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */; };
@@ -22,13 +22,15 @@
 		A6644BBF26071C4600A2A722 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BBE26071C4600A2A722 /* APIService.swift */; };
 		A6644BCD2607B7A200A2A722 /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BCC2607B7A200A2A722 /* AppRoot.swift */; };
 		A6644BD52607BE6100A2A722 /* DataBase.json in Resources */ = {isa = PBXBuildFile; fileRef = A658C53A2603280D00AF1AC0 /* DataBase.json */; };
+		A6644BD92607D25800A2A722 /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BD82607D25800A2A722 /* TaskCellView.swift */; };
+		A6644BE82607F17500A2A722 /* TaskCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6644BE72607F17500A2A722 /* TaskCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A658C47825FBA2EB00AF1AC0 /* TODO List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TODO List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A658C47B25FBA2EB00AF1AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A658C47D25FBA2EB00AF1AC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A658C47F25FBA2EB00AF1AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A658C47F25FBA2EB00AF1AC0 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A658C48725FBA2EC00AF1AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A658C48925FBA2EC00AF1AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +43,8 @@
 		A6644BBB2607192F00A2A722 /* TaskReceiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskReceiveService.swift; sourceTree = "<group>"; };
 		A6644BBE26071C4600A2A722 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A6644BCC2607B7A200A2A722 /* AppRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoot.swift; sourceTree = "<group>"; };
+		A6644BD82607D25800A2A722 /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
+		A6644BE72607F17500A2A722 /* TaskCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +95,7 @@
 		A658C49125FF373200AF1AC0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A658C47F25FBA2EB00AF1AC0 /* ViewController.swift */,
+				A658C47F25FBA2EB00AF1AC0 /* TimelineViewController.swift */,
 				A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */,
 				A658C54026032FDB00AF1AC0 /* DescriptionViewController.swift */,
 			);
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				A6644BB32607103000A2A722 /* Main.storyboard */,
+				A6644BD82607D25800A2A722 /* TaskCellView.swift */,
+				A6644BE72607F17500A2A722 /* TaskCellView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 				A658C48825FBA2EC00AF1AC0 /* LaunchScreen.storyboard in Resources */,
 				A658C48525FBA2EC00AF1AC0 /* Assets.xcassets in Resources */,
 				A6644BB42607103000A2A722 /* Main.storyboard in Resources */,
+				A6644BE82607F17500A2A722 /* TaskCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,11 +221,12 @@
 				A658C54126032FDB00AF1AC0 /* DescriptionViewController.swift in Sources */,
 				A6644BBF26071C4600A2A722 /* APIService.swift in Sources */,
 				A6644BBC2607192F00A2A722 /* TaskReceiveService.swift in Sources */,
-				A658C48025FBA2EB00AF1AC0 /* ViewController.swift in Sources */,
+				A658C48025FBA2EB00AF1AC0 /* TimelineViewController.swift in Sources */,
 				A658C4AA25FF9AEA00AF1AC0 /* TableViewCell.swift in Sources */,
 				A658C47C25FBA2EB00AF1AC0 /* AppDelegate.swift in Sources */,
 				A658C53E26032FAF00AF1AC0 /* JsonFileAPIServise.swift in Sources */,
 				A658C47E25FBA2EB00AF1AC0 /* SceneDelegate.swift in Sources */,
+				A6644BD92607D25800A2A722 /* TaskCellView.swift in Sources */,
 				A6644BCD2607B7A200A2A722 /* AppRoot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

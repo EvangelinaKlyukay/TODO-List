@@ -9,13 +9,15 @@
 import UIKit
 import FSCalendar
 
-class ViewController: UIViewController {
+class TimelineViewController: UIViewController {
     
     private var task: [Task]?
     let hoursInDay = 24
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendar: FSCalendar!
+    
+    private var allCels = [TaskCellView]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +42,35 @@ class ViewController: UIViewController {
     private func dateSelected(_ date: Date) {
         let c = Calendar.current
         let dayStart = c.startOfDay(for: date)
-        let dayEnd = c.startOfDay(for: c.date(byAdding: .day, value: 1, to: date)!)
+        let dayEnd = c.date(byAdding: .day, value: 1, to: dayStart)!
         
         let tasks = AppRoot.shared.TaskReceive.getTask(dayStart: dayStart, dayEnd: dayEnd)
+        
+        for i in 0..<tasks.count {
+            let currentCell: TaskCellView
+            if (self.allCels.count <= i) {
+                currentCell = self.createTaskCell()
+                self.allCels.append(currentCell)
+            } else {
+                currentCell = self.allCels[i]
+            }
+            currentCell.task = tasks[i]
+        }
+        
+        for i in tasks.count..<allCels.count {
+            self.allCels[i].task = nil
+        }
+    }
+    
+    private func createTaskCell() -> TaskCellView {
+        return TaskCellView()
     }
     
 }
 
 // MARK: - FSCalendarDelegate
 
-extension ViewController: FSCalendarDelegate {
+extension TimelineViewController: FSCalendarDelegate {
 
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         dateSelected(date)
@@ -59,7 +80,7 @@ extension ViewController: FSCalendarDelegate {
 
 // MARK: - UITableViewDataSource
 
-extension ViewController: UITableViewDataSource {
+extension TimelineViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return hoursInDay
@@ -84,7 +105,7 @@ extension ViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension ViewController: UITabBarDelegate {
+extension TimelineViewController: UITabBarDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            tableView.deselectRow(at: indexPath, animated: true)

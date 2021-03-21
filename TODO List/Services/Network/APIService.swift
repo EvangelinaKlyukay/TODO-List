@@ -9,6 +9,6 @@ import Foundation
 
 protocol APIService {
 
-    func loadTasks() -> [Task]!
+    func loadTasks() -> [Task]
     
 }
