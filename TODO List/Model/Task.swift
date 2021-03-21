@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct TasksContainer: Decodable {
-    var tasks: [Task]
-}
-
 struct Task : Decodable {
     
     let id: Int

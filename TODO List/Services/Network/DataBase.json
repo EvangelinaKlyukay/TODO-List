@@ -1,25 +1,23 @@
-{
-    "task":[
-        {
-            "id": 1,
-            "date_start": 1616187600,
-            "date_finish": 1616446800,
-            "name": "Task 1",
-            "description": "Task 1 description"
-        },
-        {
-            "id": 2,
-            "date_start": 1616230800,
-            "date_finish": 1616317200,
-            "name": "Task 2",
-            "description": "Task 2 description"
-        },
-        {
-            "id": 3,
-            "date_start": 1616317200,
-            "date_finish": 1616403600,
-            "name": "Task 3",
-            "description": "Task 3 description"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "date_start": 1616187600,
+        "date_finish": 1616446800,
+        "name": "Task 1",
+        "description": "Task 1 description"
+    },
+    {
+        "id": 2,
+        "date_start": 1616230800,
+        "date_finish": 1616317200,
+        "name": "Task 2",
+        "description": "Task 2 description"
+    },
+    {
+        "id": 3,
+        "date_start": 1616317200,
+        "date_finish": 1616403600,
+        "name": "Task 3",
+        "description": "Task 3 description"
+    }
+]

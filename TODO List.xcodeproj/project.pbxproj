@@ -21,6 +21,7 @@
 		A6644BBC2607192F00A2A722 /* TaskReceiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BBB2607192F00A2A722 /* TaskReceiveService.swift */; };
 		A6644BBF26071C4600A2A722 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BBE26071C4600A2A722 /* APIService.swift */; };
 		A6644BCD2607B7A200A2A722 /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6644BCC2607B7A200A2A722 /* AppRoot.swift */; };
+		A6644BD52607BE6100A2A722 /* DataBase.json in Resources */ = {isa = PBXBuildFile; fileRef = A658C53A2603280D00AF1AC0 /* DataBase.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6644BD52607BE6100A2A722 /* DataBase.json in Resources */,
 				A658C48825FBA2EC00AF1AC0 /* LaunchScreen.storyboard in Resources */,
 				A658C48525FBA2EC00AF1AC0 /* Assets.xcassets in Resources */,
 				A6644BB42607103000A2A722 /* Main.storyboard in Resources */,

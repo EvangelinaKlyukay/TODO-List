@@ -27,12 +27,13 @@ class JsonFileAPIServise: APIService {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
-                let container = try decoder.decode(TasksContainer.self, from: data)
-                allTasks = container.tasks
+                allTasks = try decoder.decode([Task].self, from: data)
             } catch {
                 allTasks = [Task]()
                 print("error:\(error)")
             }
+        } else {
+            allTasks = [Task]()
         }
         
         return allTasks
