@@ -15,7 +15,7 @@ class TaskReceiveService {
         self.api = api
     }
     
-    func getTask(startDayTimestamp dayStart: Date, endDayTimestamp dayEnd: Date) -> [Task]! {
+    func getTask(dayStart: Date, dayEnd: Date) -> [Task]! {
         return api.loadTasks()?.filter({ (task) -> Bool in
             // если время начала таска больше конца дня, то не подходит
             if task.dateStart > dayEnd { return false }

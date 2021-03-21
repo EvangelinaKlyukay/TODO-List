@@ -19,8 +19,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         DispatchQueue.main.async {
+            let today = Date()
+            self.calendar.select(today)
+            self.dateSelected(today)
             self.tableView.reloadData()
         }
     }
@@ -34,6 +37,24 @@ class ViewController: UIViewController {
         }
     }
 
+    private func dateSelected(_ date: Date) {
+        let c = Calendar.current
+        let dayStart = c.startOfDay(for: date)
+        let dayEnd = c.startOfDay(for: c.date(byAdding: .day, value: 1, to: date)!)
+        
+        let tasks = AppRoot.shared.TaskReceive.getTask(dayStart: dayStart, dayEnd: dayEnd)
+    }
+    
+}
+
+// MARK: - FSCalendarDelegate
+
+extension ViewController: FSCalendarDelegate {
+
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        dateSelected(date)
+    }
+    
 }
 
 // MARK: - UITableViewDataSource
