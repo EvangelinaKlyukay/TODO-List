@@ -111,11 +111,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZR6-yw-gGW"/>
-                    <connections>
-                        <outlet property="dateLabel" destination="OBE-8A-xdR" id="aR2-AH-6Tc"/>
-                        <outlet property="descriptionLabel" destination="IcC-fY-i3D" id="LFc-J6-vvW"/>
-                        <outlet property="nameLabel" destination="Que-EW-cfc" id="S3K-Ig-mKT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rb-3U-35U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

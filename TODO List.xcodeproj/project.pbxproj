@@ -12,7 +12,6 @@
 		A658C48025FBA2EB00AF1AC0 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C47F25FBA2EB00AF1AC0 /* TimelineViewController.swift */; };
 		A658C48525FBA2EC00AF1AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */; };
 		A658C48825FBA2EC00AF1AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A658C48625FBA2EC00AF1AC0 /* LaunchScreen.storyboard */; };
-		A658C4AA25FF9AEA00AF1AC0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */; };
 		A658C4AD25FF9BE300AF1AC0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C4AC25FF9BE300AF1AC0 /* Task.swift */; };
 		A658C527260231CF00AF1AC0 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A658C526260231CF00AF1AC0 /* FSCalendar */; };
 		A658C53E26032FAF00AF1AC0 /* JsonFileAPIServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A658C53D26032FAF00AF1AC0 /* JsonFileAPIServise.swift */; };
@@ -34,7 +33,6 @@
 		A658C48425FBA2EC00AF1AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A658C48725FBA2EC00AF1AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A658C48925FBA2EC00AF1AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A658C4AC25FF9BE300AF1AC0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		A658C53A2603280D00AF1AC0 /* DataBase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DataBase.json; sourceTree = "<group>"; };
 		A658C53D26032FAF00AF1AC0 /* JsonFileAPIServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileAPIServise.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				A658C47F25FBA2EB00AF1AC0 /* TimelineViewController.swift */,
-				A658C4A925FF9AEA00AF1AC0 /* TableViewCell.swift */,
 				A658C54026032FDB00AF1AC0 /* DescriptionViewController.swift */,
 			);
 			path = Controller;
@@ -222,7 +219,6 @@
 				A6644BBF26071C4600A2A722 /* APIService.swift in Sources */,
 				A6644BBC2607192F00A2A722 /* TaskReceiveService.swift in Sources */,
 				A658C48025FBA2EB00AF1AC0 /* TimelineViewController.swift in Sources */,
-				A658C4AA25FF9AEA00AF1AC0 /* TableViewCell.swift in Sources */,
 				A658C47C25FBA2EB00AF1AC0 /* AppDelegate.swift in Sources */,
 				A658C53E26032FAF00AF1AC0 /* JsonFileAPIServise.swift in Sources */,
 				A658C47E25FBA2EB00AF1AC0 /* SceneDelegate.swift in Sources */,

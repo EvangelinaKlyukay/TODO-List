@@ -46,15 +46,21 @@ class TimelineViewController: UIViewController {
         
         let tasks = AppRoot.shared.TaskReceive.getTask(dayStart: dayStart, dayEnd: dayEnd)
         
+        var leftBorder = dayStart
+        
         for i in 0..<tasks.count {
             let currentCell: TaskCellView
             if (self.allCels.count <= i) {
-                currentCell = self.createTaskCell()
+                currentCell = TaskCellView.loadFromXib()
+                currentCell.change(task: UIColor.random())
+                self.tableView.addSubview(currentCell)
                 self.allCels.append(currentCell)
             } else {
                 currentCell = self.allCels[i]
             }
             currentCell.task = tasks[i]
+            setPosition(forTask: currentCell, dayStart: dayStart, dayEnd: dayEnd, leftBorder: leftBorder)
+            leftBorder = Date.maxDate(left: leftBorder, right: tasks[i].dateFinish)
         }
         
         for i in tasks.count..<allCels.count {
@@ -62,8 +68,24 @@ class TimelineViewController: UIViewController {
         }
     }
     
-    private func createTaskCell() -> TaskCellView {
-        return TaskCellView()
+    private func setPosition(forTask cell: TaskCellView!, dayStart: Date, dayEnd: Date, leftBorder: Date) {
+        guard let task = cell.task else { return }
+        
+        let minInDay = 24 * 60.0
+        let secInMin = 60.0
+        
+        let leftDate = Date.maxDate(left: leftBorder, right: dayStart)
+        let rightDate = Date.minDate(left: task.dateFinish, right: dayEnd)
+        let contentHeight = Double(tableView.contentSize.height)
+        
+        let timeSinceDayStart = Double(leftDate.timeIntervalSince(dayStart)) / secInMin
+        let y = CGFloat(contentHeight * timeSinceDayStart / minInDay)
+        
+        let taskInterval = Double(rightDate.timeIntervalSince(leftDate)) / secInMin
+        let height = CGFloat(contentHeight * taskInterval / minInDay)
+        
+        let oldFrame = cell.frame
+        cell.frame = CGRect(x: oldFrame.minX, y: y, width: oldFrame.width, height: height)
     }
     
 }
@@ -112,4 +134,46 @@ extension TimelineViewController: UITabBarDelegate {
            self.performSegue(withIdentifier: "show", sender: indexPath)
        }
     
+}
+
+extension UIView {
+
+    class func loadFromXib<T>(withOwner: Any? = nil, options: [UINib.OptionsKey: Any]? = nil) -> T where T: UIView {
+        let bundle = Bundle(for: self)
+        let nib = UINib(nibName: String(describing: self), bundle: bundle)
+        
+        guard let view = nib.instantiate(withOwner: withOwner, options: options).first as? T else {
+            fatalError("Could not load view from nib file.")
+        }
+        return view
+    }
+}
+
+extension Date {
+    
+    static func minDate(left: Date, right: Date) -> Date {
+        return left < right ? left : right
+    }
+    
+    static func maxDate(left: Date, right: Date) -> Date {
+        return left > right ? left : right
+    }
+    
+}
+
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+extension UIColor {
+    static func random() -> UIColor {
+        return UIColor(
+           red:   .random(),
+           green: .random(),
+           blue:  .random(),
+           alpha: 1.0
+        )
+    }
 }

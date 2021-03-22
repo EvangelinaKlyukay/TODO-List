@@ -18,9 +18,9 @@ class TaskReceiveService {
     func getTask(dayStart: Date, dayEnd: Date) -> [Task] {
         return api.loadTasks().filter({ (task) -> Bool in
             // если время начала таска больше конца дня, то не подходит
-            if task.dateStart > dayEnd { return false }
+            if task.dateStart >= dayEnd { return false }
             // если время начала таска меньше начала дня и время конца таска меньше начала дня, то не подходит
-            if task.dateStart < dayStart && task.dateFinish < dayStart { return false }
+            if task.dateStart < dayStart && task.dateFinish <= dayStart { return false }
             // остальные все подходят
             return true
         })
