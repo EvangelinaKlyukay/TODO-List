@@ -54,6 +54,7 @@
                             <constraint firstItem="FgN-OA-E6H" firstAttribute="top" secondItem="Ugy-v4-hTX" secondAttribute="top" id="7Ln-gu-qBh"/>
                             <constraint firstAttribute="bottom" secondItem="WUG-Bv-BfB" secondAttribute="bottom" id="NBI-8M-lpr"/>
                             <constraint firstItem="WUG-Bv-BfB" firstAttribute="trailing" secondItem="Ugy-v4-hTX" secondAttribute="trailing" id="QTk-4h-zUS"/>
+                            <constraint firstItem="WUG-Bv-BfB" firstAttribute="width" secondItem="FgN-OA-E6H" secondAttribute="height" multiplier="138:91" id="i5S-aW-9lQ"/>
                             <constraint firstItem="FgN-OA-E6H" firstAttribute="trailing" secondItem="Ugy-v4-hTX" secondAttribute="trailing" id="n1N-T4-9C0"/>
                             <constraint firstItem="WUG-Bv-BfB" firstAttribute="leading" secondItem="Ugy-v4-hTX" secondAttribute="leading" id="tpG-h5-S0d"/>
                             <constraint firstItem="FgN-OA-E6H" firstAttribute="leading" secondItem="Ugy-v4-hTX" secondAttribute="leading" id="wt2-rD-RfG"/>

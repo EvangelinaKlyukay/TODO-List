@@ -14,8 +14,8 @@ class TimelineViewController: UIViewController {
     private var task: [Task]?
     let hoursInDay = 24
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var calendar: FSCalendar!
     
     private var allCels = [TaskCellView]()
 

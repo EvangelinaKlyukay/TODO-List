@@ -10,9 +10,9 @@ import UIKit
 
 class TaskCellView: UIView {
     
-    @IBOutlet weak var nameText: UILabel!
-    @IBOutlet weak var dateText: UILabel!
-    @IBOutlet weak var background: UIView!
+    @IBOutlet private weak var nameText: UILabel!
+    @IBOutlet private weak var dateText: UILabel!
+    @IBOutlet private weak var background: UIView!
     
     var task: Task?
     {
